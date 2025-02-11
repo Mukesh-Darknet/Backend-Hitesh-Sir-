@@ -8,9 +8,27 @@ dotenv.config({
   path:'./env'  
 })
 
-
-
 connectDB(); 
+
+then(() => {
+  app.listen(process.env.PORT || 6000,  () =>{
+    console.log("Server is stared");
+    
+
+  } )
+})
+.catch((err) =>{
+  console.log("Mongodb connection Failed !!!" ,err);
+  
+})
+
+
+
+
+
+
+
+
 
 
 /*  first approch
