@@ -14,7 +14,8 @@ app.use(cors({
 app.use(express.json({limits:"16kb"}))
 
 // to handle the url encoder
-app.use(express.urlencoded())
+app.use(express.urlencoded());
+
 // static is used  to store file and folder we use  like pdf file photoes
 app.use(express.static("public"));
 

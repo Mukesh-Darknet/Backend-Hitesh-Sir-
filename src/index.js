@@ -5,17 +5,16 @@ import dotenv from 'dotenv';
 import connectDB from "./db/index.js";
 
 dotenv.config({
-  path:'./env'  
+  path:'./.env'  
 })
 
-connectDB(); 
+connectDB()
 
-then(() => {
+.then(() => {
   app.listen(process.env.PORT || 6000,  () =>{
     console.log("Server is stared");
-    
 
-  } )
+  } );
 })
 .catch((err) =>{
   console.log("Mongodb connection Failed !!!" ,err);

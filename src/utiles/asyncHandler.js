@@ -9,7 +9,7 @@ const asynHandler  = (reqHandler) =>{
 
 
 
-export {asyncHandler}
+export {asynHandler}
 
 
 
