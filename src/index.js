@@ -1,8 +1,12 @@
 // import mongoose from "mongoose"; 
 // import { DB_NAME} from './constant'
 // import constant from './constant.js'
+import express from "express";
 import dotenv from 'dotenv';
 import connectDB from "./db/index.js";
+
+import {app} from "./app.js";
+  // const app = express();
 
 dotenv.config({
   path:'./.env'  
@@ -11,8 +15,9 @@ dotenv.config({
 connectDB()
 
 .then(() => {
+  // create serverz
   app.listen(process.env.PORT || 6000,  () =>{
-    console.log("Server is stared");
+    console.log(`Server is stared: ${process.env.PORT}`);
 
   } );
 })
